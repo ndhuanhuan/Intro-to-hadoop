@@ -6,7 +6,8 @@ hadoop fs -put purchases.txt
 hadoop fs -tail purchases.txt   //show part of it
 hadoop fs -cat purchases.txt    //show all of them
 hadoop fs -mv purchases.txt newname.txt //rename
-hadoop fs -rm newname.txt
+hadoop fs -rm newname.txt                       //delete file
+hadoop fs -rm -r -f output_q3_2                 //delete directory
 hadoop fs -mkdir myinput
 hadoop fs -put purchases.txt myinput
 hadoop fs -ls myinput
