@@ -1,0 +1,25 @@
+HDFS------------
+
+ls
+hadoop fs -ls
+hadoop fs -put purchases.txt
+hadoop fs -tail purchases.txt   //show part of it
+hadoop fs -cat purchases.txt    //show all of them
+hadoop fs -mv purchases.txt newname.txt //rename
+hadoop fs -rm newname.txt
+hadoop fs -mkdir myinput
+hadoop fs -put purchases.txt myinput
+hadoop fs -ls myinput
+
+
+Mapper_reducer----------------
+./mapper.py
+field1	f2	f3	f4	f5	f6
+ctrl+d
+
+head -50 ../data/purchases.txt > testfile
+cat testfile | ./mapper.py
+cat testfile | ./mapper.py |sort | ./reducer.py
+hs mapper.py reducer.py myinput output2
+hadoop fs -ls output2
+hadoop fs -cat output2/part-00000 | less
