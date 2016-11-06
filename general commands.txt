@@ -24,3 +24,12 @@ cat testfile | ./mapper.py |sort | ./reducer.py
 hs mapper.py reducer.py myinput output2
 hadoop fs -ls output2
 hadoop fs -cat output2/part-00000 | less
+
+
+--upzip file
+$ gunzip file.gz
+$ ls file
+
+
+
+
